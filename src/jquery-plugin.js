@@ -1,5 +1,5 @@
 /*
- * jquery plugin
+ * Example dialog plugin
  * 
  *
  * Copyright (c) 2014 George Paterson
@@ -8,31 +8,30 @@
 
 (function ($) {
 
-  // Collection method.
-  $.fn.jqueryPlugin = function () {
-    return this.each(function (i) {
-      // Do something to each selected element.
-      $(this).html('jqueryPlugin' + i);
+
+	var Dialog = function (element, options) {
+		this.element = $(element);
+		this.options = options;
+	};
+
+
+  $.fn.dialog = function (method) {
+    return this.each(function () {
+      /*  */
+			var data = $(this).data('dialog'),
+				options = $.extend(true, {}, $.fn.dialog.defaults, $(this).data('dialog'), typeof method === 'object' && method);
+			/*  */
+      if (!data) {
+				$(this).data('dialog', (data = new Dialog(this, options)));
+			}
+      /*  */
+			if (typeof method === 'string' && data[method]) {
+				data[method]();
+			}
     });
   };
-
-  // Static method.
-  $.jqueryPlugin = function (options) {
-    // Override default options with passed-in options.
-    options = $.extend({}, $.jqueryPlugin.options, options);
-    // Return the name of your plugin plus a punctuation character.
-    return 'jqueryPlugin' + options.punctuation;
+  /*  */
+  $.fn.dialog.defaults = {
+    modal: true
   };
-
-  // Static method default options.
-  $.jqueryPlugin.options = {
-    punctuation: '.'
-  };
-
-  // Custom selector.
-  $.expr[':'].jqueryPlugin = function (elem) {
-    // Does this element contain the name of your plugin?
-    return $(elem).text().indexOf('jqueryPlugin') !== -1;
-  };
-
 }(jQuery));
