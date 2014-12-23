@@ -5,7 +5,7 @@
  * Copyright (c) 2014 George Paterson
  * Licensed under the MIT license.
  */
-
+'use strict';
 (function ($) {
 
 
@@ -13,7 +13,23 @@
 		this.element = $(element);
 		this.options = options;
 	};
+  
+  Dialog.prototype.show = function () {
 
+  };
+  
+  Dialog.prototype.modal = function () {
+
+  };
+  
+  Dialog.prototype.hide = function () {
+
+  };
+
+  Dialog.prototype.destroy = function () {
+    this.hide();
+    this.element.removeData('dialog');
+  };
 
   $.fn.dialog = function (method) {
     return this.each(function () {

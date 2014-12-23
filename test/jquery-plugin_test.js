@@ -38,4 +38,12 @@
     var $modal = this.elems.dialog();
     ok($modal.dialog('show'), 'show method called');
   });
+  test('should call hide method', function () {
+    var $modal = this.elems.dialog();
+    ok($modal.dialog('hide'), 'hide method called');
+  });
+  test('should call destroy method', function () {
+    var $modal = this.elems.dialog();
+    ok($modal.dialog('destroy'), 'destroy method called');
+  });
 }(jQuery));
