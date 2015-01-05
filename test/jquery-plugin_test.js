@@ -22,7 +22,7 @@
   module('dialog', {
     // This will run before each test in this module.
     setup: function() {
-      this.elems = $('#qunit-fixture').children();
+      this.elems = $('#example');
     }
   });
   test('is chainable', function() {
@@ -31,8 +31,8 @@
   });
   test('should return jquery collection', function () {
     var $modal = this.elems.dialog();
-    ok($modal instanceof $, 'returns jquery collection')
-    strictEqual($modal[0], this.elems[0], 'collection contains element')
+    ok($modal instanceof $, 'returns jquery collection');
+    strictEqual($modal[0], this.elems[0], 'collection contains element');
   });
   test('should call show method', function () {
     var $modal = this.elems.dialog();

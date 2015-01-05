@@ -2,32 +2,67 @@
  * Example dialog plugin
  * 
  *
- * Copyright (c) 2014 George Paterson
+ * Copyright (c) 2015 George Paterson
  * Licensed under the MIT license.
  */
-'use strict';
 (function ($) {
-
+  'use strict';
 
 	var Dialog = function (element, options) {
 		this.element = $(element);
 		this.options = options;
+    this.isShown = null;
+    this.modal = null;
 	};
   
   Dialog.prototype.show = function () {
-
+    var that = this;
+    /*  */
+    if (this.isShown) {
+      return;
+    }
+    /*  */
+    this.element.addClass('dialog-show').attr('aria-hidden', false).focus();
+    /*  */
+    $(document).on('focusin.dialog', function (event) {
+      if (that.element[0] !== event.target && !that.element.has(event.target).length) {
+        that.element.focus();
+      }
+    });
+    /*  */
+		this.element.on('keyup.dialog', function (event) {
+			if (event.which === 27) {
+				that.hide();
+			}
+		});
+    /*  */
+    this.isShown = true;
   };
   
   Dialog.prototype.modal = function () {
-
+  
   };
   
   Dialog.prototype.hide = function () {
-
+    var that = this;
+    /*  */
+    if (!this.isShown) {
+      return;
+    }
+    /*  */
+    this.element.removeClass('dialog-show').attr('aria-hidden', true);
+    /*  */
+    $(document).off('focusin.dialog');
+    /*  */
+    this.element.off('keyup.dialog');
+    /*  */
+    this.isShown = false;
   };
 
   Dialog.prototype.destroy = function () {
+    /*  */
     this.hide();
+    /*  */
     this.element.removeData('dialog');
   };
 
