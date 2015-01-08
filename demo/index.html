@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Boilerplate</title>
+		<link rel="stylesheet" href="../src/jquery-plugin.css" type="text/css" media="screen">
+		<script src="../bower_components/jquery/dist/jquery.js"></script>
+		<script src="../src/jquery-plugin.js"></script>
+	</head>
+	<body>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper elit arcu, non eleifend augue pharetra a. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec urna nisi, scelerisque vel mi eu, convallis faucibus velit. Integer posuere eu erat ut vestibulum. Nunc pulvinar at ex non pharetra. Duis egestas placerat massa eget egestas. Nulla non leo ac augue iaculis vulputate. Nullam pulvinar, ex id volutpat lacinia, nisi metus mattis nunc, ac tempor augue tortor fermentum lectus. Pellentesque a sapien facilisis sem varius laoreet sit amet sit amet nibh. Fusce vel dui turpis. Sed venenatis mauris nunc, non dapibus ex consectetur porttitor. Cras accumsan lectus tristique nisl posuere pretium.</p>
+		<p>Nullam ultricies quam eget erat tempor euismod. Nulla facilisi. Nullam ullamcorper elementum semper. Ut ut sem egestas, volutpat purus luctus, pharetra ex. Vestibulum aliquet varius lorem sit amet rutrum. Phasellus finibus suscipit accumsan. Nullam placerat quis nisl a lacinia. Vestibulum nunc erat, fermentum nec eros quis, maximus sodales quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque consequat dolor eu lacus mollis consequat eu nec risus. Integer vel arcu mollis, placerat purus sit amet, hendrerit leo. Aliquam erat volutpat. In pellentesque tincidunt tempus.</p>
+		<p>Proin imperdiet cursus sem eu venenatis. Nulla ultrices quam ac nunc aliquam placerat. In eget pulvinar nisi. Sed at risus purus. Suspendisse vel lacus non enim tempor convallis a vulputate neque. In nec nibh ut massa pellentesque feugiat non sed urna. Nulla vestibulum imperdiet tellus, at sodales ligula. Donec bibendum euismod est eu imperdiet. In placerat, nisi a tincidunt pretium, turpis arcu consectetur risus, fringilla elementum metus nulla ac orci. Suspendisse potenti. Donec rhoncus cursus sapien et egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec viverra suscipit diam non tincidunt. Donec iaculis, metus nec vulputate eleifend, mauris orci ullamcorper libero, ut ultrices orci mi in leo. Phasellus nec odio eros. Integer auctor, nulla sollicitudin condimentum lacinia, eros sem aliquet mi, et eleifend lectus lorem id ante.</p>
+		<p>Phasellus gravida <a href="#">hendrerit</a> viverra. Praesent vel nisi ultricies arcu facilisis gravida. Phasellus quis urna cursus est pulvinar semper. Sed volutpat erat quis ligula congue convallis. Mauris tristique eu lacus id dignissim. Phasellus et venenatis ipsum, vitae cursus nibh. Fusce vestibulum consequat enim ac iaculis. Suspendisse vehicula nulla sit amet mi ultricies eleifend eu et dolor.</p>
+		<p>Morbi eros ipsum, sodales sit amet lorem vitae, facilisis placerat quam. Mauris quis dictum nunc. Ut velit mi, facilisis eu aliquet at, laoreet eu diam. Donec elementum volutpat arcu, id pharetra dolor dictum a. Etiam in diam vel odio efficitur cursus eget eu est. Aenean at orci posuere, malesuada purus eu, sollicitudin lacus. In malesuada sem eu ligula interdum aliquet. Curabitur dapibus arcu eu ipsum gravida, sed efficitur lacus elementum. Nunc at ex fermentum, varius nisi id, aliquet lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque vulputate fermentum orci, quis semper mauris aliquam in. Nulla rutrum sem tortor, quis posuere ex imperdiet ac. Nulla ornare tempor quam ac tempor. Aliquam leo purus, fringilla eget accumsan in, venenatis in nisl. Suspendisse mattis est et dolor aliquam imperdiet.</p>
+		<button class="show">Show dialog</button>
+		<div class="dialog" id="example" role="dialog" tabindex="-1">
+			<div class="dialog-container">
+	    	<div class="dialog-main">
+					<h3>Dialog test markup</h3>
+					<p>Phasellus gravida <a href="#">hendrerit</a> viverra. Praesent vel nisi ultricies arcu facilisis gravida. Phasellus quis urna cursus est pulvinar semper. Sed volutpat erat quis ligula congue convallis. Mauris tristique eu lacus id dignissim. Phasellus et venenatis ipsum, vitae cursus nibh. Fusce vestibulum consequat enim ac iaculis. Suspendisse vehicula nulla sit amet mi ultricies eleifend eu et dolor.</p>
+					<button class="hide">Hide dialog</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				$('.show').on('click', function (event) {
+					event.preventDefault();
+					$('#example').dialog('show');
+				});
+				$('.hide').on('click', function (event) {
+					event.preventDefault();
+					$('#example').dialog('hide');
+				});				
+			});
+		</script>
+	</body>
+</html>

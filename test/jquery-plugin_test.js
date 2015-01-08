@@ -30,20 +30,25 @@
     strictEqual(this.elems.dialog(), this.elems, 'should be chainable');
   });
   test('should return jquery collection', function () {
-    var $modal = this.elems.dialog();
-    ok($modal instanceof $, 'returns jquery collection');
-    strictEqual($modal[0], this.elems[0], 'collection contains element');
+    var $dialog = this.elems.dialog();
+    ok($dialog instanceof $, 'returns jquery collection');
+    strictEqual($dialog[0], this.elems[0], 'collection contains element');
+  });
+  test('should return data on element', function () {
+    var $dialog = this.elems.dialog();
+    ok($dialog.data('dialog'), 'dialog data on element');
   });
   test('should call show method', function () {
-    var $modal = this.elems.dialog();
-    ok($modal.dialog('show'), 'show method called');
+    var $dialog = this.elems.dialog();
+    ok($dialog.dialog('show'), 'show method called');
   });
   test('should call hide method', function () {
-    var $modal = this.elems.dialog();
-    ok($modal.dialog('hide'), 'hide method called');
+    var $dialog = this.elems.dialog();
+    ok($dialog.dialog('hide'), 'hide method called');
   });
   test('should call destroy method', function () {
-    var $modal = this.elems.dialog();
-    ok($modal.dialog('destroy'), 'destroy method called');
+    var $dialog = this.elems.dialog();
+    ok($dialog.dialog('destroy'), 'destroy method called');
+    strictEqual(undefined, $dialog.data('dialog'), 'data on element destroyed');
   });
 }(jQuery));

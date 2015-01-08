@@ -22,15 +22,15 @@
       return;
     }
     /*  */
-    this.element.addClass('dialog-show').attr('aria-hidden', false).focus();
+    this.element.addClass('dialog-show').attr('aria-hidden', false).trigger('focus');
     /*  */
     $(document).on('focusin.dialog', function (event) {
       if (that.element[0] !== event.target && !that.element.has(event.target).length) {
-        that.element.focus();
+        that.element.trigger('focus');
       }
     });
     /*  */
-		this.element.on('keyup.dialog', function (event) {
+		$(document).on('keyup.dialog', function (event) {
 			if (event.which === 27) {
 				that.hide();
 			}
@@ -44,7 +44,6 @@
   };
   
   Dialog.prototype.hide = function () {
-    var that = this;
     /*  */
     if (!this.isShown) {
       return;
