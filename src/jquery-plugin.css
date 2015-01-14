@@ -11,6 +11,15 @@ body {
   right: 0;
   top: 0;
 }
+.dialog-modal {
+  background: #000;
+  height: 100%;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .dialog-show {
   display: block;
 }
@@ -20,5 +29,6 @@ body {
   border-radius: 5px;
   margin: 20px auto;
   padding: 10px;
+  position: relative;
   width: 480px;
 }
