@@ -21,7 +21,7 @@
   */
   module('dialog', {
     // This will run before each test in this module.
-    setup: function() {
+    beforeEach: function() {
       this.elems = $('#example');
     }
   });
@@ -41,10 +41,12 @@
   test('should call show method', function () {
     var $dialog = this.elems.dialog();
     ok($dialog.dialog('show'), 'show method called');
+    ok($dialog.is(':visible'), 'dialog is visible');	
   });
   test('should call hide method', function () {
     var $dialog = this.elems.dialog();
     ok($dialog.dialog('hide'), 'hide method called');
+    ok($dialog.is(':hidden'), 'dialog is hidden');		
   });
   test('should call destroy method', function () {
     var $dialog = this.elems.dialog();

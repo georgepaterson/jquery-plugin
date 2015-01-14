@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>jQuery plugin Test Suite</title>
+	<link rel="stylesheet" href="../src/jquery-plugin.css" type="text/css" media="screen">
   <!-- Load local jQuery. -->
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <!-- Load local QUnit. -->
@@ -19,10 +20,12 @@
 <body>
   <div id="qunit"></div>
   <div id="qunit-fixture">
-		<div class="dialog">
-			<div role="dialog" class="dialog-container" id="example">
+		<div class="dialog" id="example" role="dialog" tabindex="-1">
+			<div class="dialog-container">
 	    	<div class="dialog-main">
-					<span>dialog test markup</span>
+					<h3>Dialog test markup</h3>
+					<p>Phasellus gravida <a href="#">hendrerit</a> viverra. Praesent vel nisi ultricies arcu facilisis gravida. Phasellus quis urna cursus est pulvinar semper. Sed volutpat erat quis ligula congue convallis. Mauris tristique eu lacus id dignissim. Phasellus et venenatis ipsum, vitae cursus nibh. Fusce vestibulum consequat enim ac iaculis. Suspendisse vehicula nulla sit amet mi ultricies eleifend eu et dolor.</p>
+					<button class="hide">Hide dialog</button>
 				</div>
 			</div>
 		</div>
