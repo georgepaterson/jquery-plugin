@@ -33,10 +33,7 @@
     var $dialog = this.elems.dialog();
     ok($dialog instanceof $, 'returns jquery collection');
     strictEqual($dialog[0], this.elems[0], 'collection contains element');
-  });
-  test('should return data on element', function () {
-    var $dialog = this.elems.dialog();
-    ok($dialog.data('dialog'), 'dialog data on element');
+    ok($dialog.data('dialog'), 'collection contains data');
   });
   test('should call show method', function () {
     var $dialog = this.elems.dialog();
