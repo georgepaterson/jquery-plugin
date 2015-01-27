@@ -8,11 +8,11 @@
 (function ($) {
   'use strict';
   // Dialog class constructor.
-	var Dialog = function (element, options) {
-		this.element = $(element);
-		this.options = options;
+  var Dialog = function (element, options) {
+    this.element = $(element);
+    this.options = options;
     this.isShown = null;
-	};
+  };
   // Dialog show public function.
   Dialog.prototype.show = function () {
     var that = this;
@@ -33,11 +33,11 @@
       }
     });
     // Add keyup event, if escape key is used trigger hide event.
-		$(document).on('keyup.dialog', function (event) {
-			if (event.which === 27) {
-				that.hide();
-			}
-		});
+    $(document).on('keyup.dialog', function (event) {
+      if (event.which === 27) {
+        that.hide();
+      }
+    });
     // Dialog is now shown.
     this.isShown = true;
   };
