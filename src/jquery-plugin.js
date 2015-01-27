@@ -23,7 +23,7 @@
     // Add class and ARIA attributes, set focus on dialog. 
     this.element.addClass('dialog-show').attr('aria-hidden', false).trigger('focus');
     // Add modal background, add hide event trigger.    
-    this.modal = $('<div class="dialog-modal" />').prependTo(this.element).on('click.dialog', function (event) {
+    this.modal = $('<div class="dialog-modal" />').prependTo(this.element).on('click.dialog', function () {
       that.hide();
     });
     // Add focusin event, if in page focus is not on the dialog set focus on the dialog.

@@ -68,6 +68,12 @@ module.exports = function (grunt) {
         src: ['test/**/*.js']
       }
     },
+    copy: {
+      files: {
+        src: 'src/jquery-plugin.css',
+        dest: 'dist/jquery-plugin.css'
+      }
+    },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -93,7 +99,7 @@ module.exports = function (grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'clean', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'clean', 'concat', 'uglify', 'copy']);
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);

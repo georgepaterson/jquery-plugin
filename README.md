@@ -14,6 +14,7 @@ Download the [minified version][min] or the [development version][max].
 In your web page:
 
 ```html
+<link rel="stylesheet" href="dist/jquery-plugin.css" type="text/css" media="screen">
 <script src="jquery.js"></script>
 <script src="dist/jquery-plugin.min.js"></script>
 <script>
