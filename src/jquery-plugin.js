@@ -71,18 +71,18 @@
   $.fn.dialog = function (method) {
     return this.each(function () {
       // Set data and options.
-			var data = $(this).data('dialog'),
-				options = $.extend(true, {}, $.fn.dialog.defaults, $(this).data('dialog'), typeof method === 'object' && method);
-			// If no data create a new dialog.
+      var data = $(this).data('dialog'),
+        options = $.extend(true, {}, $.fn.dialog.defaults, $(this).data('dialog'), typeof method === 'object' && method);
+      // If no data create a new dialog.
       if (!data) {
-				$(this).data('dialog', (data = new Dialog(this, options)));
-			}
+        $(this).data('dialog', (data = new Dialog(this, options)));
+      }
       // Test if a public function is called, else if no function try showing the dialog.
-			if (typeof method === 'string' && data[method]) {
-				data[method]();
-			} else if (options.auto) {
-			  data.show();
-			}
+      if (typeof method === 'string' && data[method]) {
+        data[method]();
+      } else if (options.auto) {
+        data.show();
+      }
     });
   };
   // Dialog default options.
