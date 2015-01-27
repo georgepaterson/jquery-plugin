@@ -1,7 +1,7 @@
 {
   "name": "jquery-plugin",
-  "title": "Awesome jQuery plugin",
-  "description": "The best jQuery plugin ever.",
+  "title": "jQuery plugin",
+  "description": "jQuery plugin pattern demonstrating unit testing.",
   "version": "0.1.0",
   "homepage": "",
   "author": {
