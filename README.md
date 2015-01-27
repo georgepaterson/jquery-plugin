@@ -1,6 +1,8 @@
-# Awesome jQuery plugin
+# jQuery dialog plugin
 
-The best jQuery plugin ever.
+Demonstration jQuery dialog plugin showing how to structure a plugin with public functions for unit testing.
+
+_Dialog plugin is only designed as a demonstration not for production._
 
 ## Getting Started
 
@@ -16,7 +18,10 @@ In your web page:
 <script src="dist/jquery-plugin.min.js"></script>
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
+	$('.show').on('click', function (event) {
+		event.preventDefault();
+		$('#example').dialog();
+	});
 });
 </script>
 ```
