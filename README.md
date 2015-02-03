@@ -12,6 +12,7 @@ The plugin has three sections, the dialog class, the class prototypes, and the j
 
 ### Dialog class 
 
+Definition of the dialog class, with class properties.
 
 ```javascript
 var Dialog = function (element, options) {
@@ -20,7 +21,9 @@ var Dialog = function (element, options) {
  this.isShown = null;
 };
 ```
-### Class prototypes
+### Dialog methods
+
+Hide, show, amd destroy methods have been created using prototype. These method are public and can be called through the jQuery constructor.
 
 ```javascript
 Dialog.prototype.destroy = function () {
@@ -29,7 +32,13 @@ Dialog.prototype.destroy = function () {
 };
 ```
 
+Public methods are testable by unit testing frameworks.
+
 ###  jQuery constructor
+
+The jQuery constructor binds the new dialog class instance as data to the element, and allows us to set the element and option properties.
+
+If the same class instance already exists then we use that instance and test for available methods or options. 
 
 ```javascript
 $.fn.dialog = function (method) {
@@ -46,14 +55,15 @@ $.fn.dialog = function (method) {
     }
   });
 };
-```
+``` 
+
+Defaults options are available to become properties of the class instance.
 
 ```javascript
 $.fn.dialog.defaults = {
   auto: true
 }; 
 ```
-
 
 ## Release History
 _(Nothing yet)_
