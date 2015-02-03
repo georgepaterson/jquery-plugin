@@ -31,6 +31,51 @@ jQuery(function($) {
 
 This jQuery plugin demonstrates a jQuery plugin pattern with public functions, supporting structured unit testing.
 
+The plugin has three sections, the dialog class constructor, the class prototype functions, and the jQuery instantiation.
+
+### Class constructor
+
+```javascript
+var Dialog = function (element, options) {
+ this.element = $(element);
+ this.options = options;
+ this.isShown = null;
+};
+```
+### Class prototype funtions 
+
+```javascript
+Dialog.prototype.destroy = function () {
+  this.hide();
+  this.element.removeData('dialog');
+};
+```
+
+###  jQuery instantiation
+
+```javascript
+$.fn.dialog = function (method) {
+  return this.each(function () {
+    var data = $(this).data('dialog'),
+      options = $.extend(true, {}, $.fn.dialog.defaults, $(this).data('dialog'), typeof method === 'object' && method);
+    if (!data) {
+      $(this).data('dialog', (data = new Dialog(this, options)));
+    }
+    if (typeof method === 'string' && data[method]) {
+      data[method]();
+    } else if (options.auto) {
+      data.show();
+    }
+  });
+};
+```
+
+```javascript
+$.fn.dialog.defaults = {
+  auto: true
+}; 
+```
+
 
 ## Release History
 _(Nothing yet)_
