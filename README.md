@@ -6,7 +6,9 @@ _Dialog plugin is only designed as a demonstration not for production._
 
 ## Documentation
 
-This jQuery plugin demonstrates a jQuery plugin pattern with public functions, supporting structured unit testing. The plugin has been scaffolded using the [https://github.com/yeoman/generator-jquery][Yeoman jQuery generator].
+This jQuery plugin demonstrates a jQuery plugin pattern with public functions, supporting structured unit testing. The plugin has been scaffolded using the [Yeoman jQuery generator][yeoman].
+
+[yeoman]: https://github.com/yeoman/generator-jquery
 
 The plugin has three sections, the dialog class, the class prototypes, and the jQuery constructor.
 
