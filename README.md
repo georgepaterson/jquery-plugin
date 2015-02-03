@@ -4,36 +4,14 @@ Demonstration jQuery plugin showing how to structure a plugin with public functi
 
 _Dialog plugin is only designed as a demonstration not for production._
 
-## Getting Started
-
-Download the [minified version][min] or the [development version][max].
-
-[min]: https://raw.githubusercontent.com/georgepaterson/jquery-jquery-plugin/master/dist/jquery.jquery-plugin.min.js
-[max]: https://raw.githubusercontent.com/georgepaterson/jquery-jquery-plugin/master/dist/jquery.jquery-plugin.js
-
-In your web page:
-
-```html
-<link rel="stylesheet" href="dist/jquery-plugin.css" type="text/css" media="screen">
-<script src="jquery.js"></script>
-<script src="dist/jquery-plugin.min.js"></script>
-<script>
-jQuery(function($) {
-	$('.show').on('click', function (event) {
-		event.preventDefault();
-		$('#example').dialog();
-	});
-});
-</script>
-```
-
 ## Documentation
 
-This jQuery plugin demonstrates a jQuery plugin pattern with public functions, supporting structured unit testing.
+This jQuery plugin demonstrates a jQuery plugin pattern with public functions, supporting structured unit testing. The plugin has been scaffolded using the [https://github.com/yeoman/generator-jquery][Yeoman jQuery generator].
 
-The plugin has three sections, the dialog class constructor, the class prototype functions, and the jQuery instantiation.
+The plugin has three sections, the dialog class, the class prototypes, and the jQuery constructor.
 
-### Class constructor
+### Dialog class 
+
 
 ```javascript
 var Dialog = function (element, options) {
@@ -42,7 +20,7 @@ var Dialog = function (element, options) {
  this.isShown = null;
 };
 ```
-### Class prototype funtions 
+### Class prototypes
 
 ```javascript
 Dialog.prototype.destroy = function () {
@@ -51,7 +29,7 @@ Dialog.prototype.destroy = function () {
 };
 ```
 
-###  jQuery instantiation
+###  jQuery constructor
 
 ```javascript
 $.fn.dialog = function (method) {
