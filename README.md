@@ -4,6 +4,24 @@ Demonstration jQuery plugin showing how to structure a plugin with public functi
 
 _Dialog plugin is only designed as a demonstration not for production._
 
+## Getting started
+
+The plugin has been scaffolded using the [Yeoman jQuery generator][yeoman].
+
+There are three possible grunt tasks for this project accessible through the command line.
+
+	$ grunt
+
+The default grunt task will run the unit tests on a local server, and if the tests are passed it will generate the distribution code. 
+
+	$ grunt serve
+
+Grunt serve will created a local server, the demo can be found at http://0.0.0.0:9000/demo, although a local server is not necessary to run this demo.
+
+	$ grunt test
+	
+Grunt test will run the unit tests. 
+
 ## Documentation
 
 This jQuery plugin demonstrates a jQuery plugin pattern with public functions, supporting structured unit testing. The plugin has been scaffolded using the [Yeoman jQuery generator][yeoman].
@@ -66,6 +84,10 @@ $.fn.dialog.defaults = {
   auto: true
 }; 
 ```
+
+## Unit testing
+
+
 
 ## Release History
 _(Nothing yet)_
