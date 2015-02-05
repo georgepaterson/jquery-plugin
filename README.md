@@ -105,48 +105,53 @@ Unti tests for jQuery are created in QUnit, the full API reference can be found 
       notStrictEqual(actual, expected, [message])
       throws(block, [expected], [message])
 
+```javascript
+module('dialog', {
+  beforeEach: function() {
+    this.elems = $('#example');
+  }
+});
+```
 
-  module('dialog', {
-    beforeEach: function() {
-      this.elems = $('#example');
-    }
-  });
-	
-	
-  test('is chainable', function() {
-    expect(1);
-    strictEqual(this.elems.dialog(), this.elems, 'should be chainable');
-  });
-	
-	
-  test('should return jquery collection', function () {
-    var $dialog = this.elems.dialog();
-    ok($dialog instanceof $, 'returns jquery collection');
-    strictEqual($dialog[0], this.elems[0], 'collection contains element');
-    ok($dialog.data('dialog'), 'collection contains data');
-  });
-	
-	
-  test('should call show method', function () {
-    var $dialog = this.elems.dialog();
-    ok($dialog.dialog('show'), 'show method called');
-    ok($dialog.is(':visible'), 'dialog is visible');	
-  });
-	
-	
-  test('should call hide method', function () {
-    var $dialog = this.elems.dialog();
-    ok($dialog.dialog('hide'), 'hide method called');
-    ok($dialog.is(':hidden'), 'dialog is hidden');		
-  });
-	
-	
-  test('should call destroy method', function () {
-    var $dialog = this.elems.dialog();
-    ok($dialog.dialog('destroy'), 'destroy method called');
-    strictEqual(undefined, $dialog.data('dialog'), 'data on element destroyed');
-  });
+```javascript
+test('is chainable', function() {
+  expect(1);
+  strictEqual(this.elems.dialog(), this.elems, 'should be chainable');
+});
+```
 
+```javascript
+test('should return jquery collection', function () {
+  var $dialog = this.elems.dialog();
+  ok($dialog instanceof $, 'returns jquery collection');
+  strictEqual($dialog[0], this.elems[0], 'collection contains element');
+  ok($dialog.data('dialog'), 'collection contains data');
+});
+```
+
+```javascript
+test('should call show method', function () {
+  var $dialog = this.elems.dialog();
+  ok($dialog.dialog('show'), 'show method called');
+  ok($dialog.is(':visible'), 'dialog is visible');	
+});
+```
+
+```javascript
+test('should call hide method', function () {
+  var $dialog = this.elems.dialog();
+  ok($dialog.dialog('hide'), 'hide method called');
+  ok($dialog.is(':hidden'), 'dialog is hidden');		
+});
+```
+
+```javascript
+test('should call destroy method', function () {
+  var $dialog = this.elems.dialog();
+  ok($dialog.dialog('destroy'), 'destroy method called');
+  strictEqual(undefined, $dialog.data('dialog'), 'data on element destroyed');
+});
+```
 
 ## Release History
 _(Nothing yet)_
