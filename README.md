@@ -119,7 +119,7 @@ module('dialog', {
 		<div class="dialog-container">
     	<div class="dialog-main">
 				<h3>Dialog test markup</h3>
-				<p>Phasellus gravida <a href="#">hendrerit</a> viverra. Praesent vel nisi ultricies arcu facilisis gravida. Phasellus quis urna cursus est pulvinar semper. Sed volutpat erat quis ligula congue convallis. Mauris tristique eu lacus id dignissim. Phasellus et venenatis ipsum, vitae cursus nibh. Fusce vestibulum consequat enim ac iaculis. Suspendisse vehicula nulla sit amet mi ultricies eleifend eu et dolor.</p>
+				<p>Phasellus gravida <a href="#">hendrerit</a> viverra.</p>
 				<button class="hide">Hide dialog</button>
 			</div>
 		</div>
