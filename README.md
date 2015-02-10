@@ -87,7 +87,7 @@ $.fn.dialog.defaults = {
 
 ## Unit tests
 
-Unit tests for jQuery are created in QUnit, the full API reference can be found at http://api.qunitjs.com/ the included handy little reference can be found below:
+Unit tests for the jQuery plugin are created in QUnit, the full API reference can be found at http://api.qunitjs.com/ the included handy little reference can be found below:
 
     Test methods:
       module(name, {[setup][ ,teardown]})
@@ -114,6 +114,7 @@ module('dialog', {
   }
 });
 ```
+
 The quint-fixture div contains the HTML we will be using in the tests.
 
 ```html
@@ -130,12 +131,16 @@ The quint-fixture div contains the HTML we will be using in the tests.
 </div>
 ```
 
+The first test asserts whether or not the plugin is chainable, a fundamental feature of jQuery.
+
 ```javascript
 test('is chainable', function() {
   expect(1);
   strictEqual(this.elems.dialog(), this.elems, 'should be chainable');
 });
 ```
+
+With the second test we have several assertions, the first tests whether the object returns a jQuery collection. The second and third test whether the collection contains the element and whether the collection contains the plugin data. 
 
 ```javascript
 test('should return jquery collection', function () {
@@ -146,6 +151,8 @@ test('should return jquery collection', function () {
 });
 ```
 
+
+
 ```javascript
 test('should call show method', function () {
   var $dialog = this.elems.dialog();
@@ -154,6 +161,8 @@ test('should call show method', function () {
 });
 ```
 
+
+
 ```javascript
 test('should call hide method', function () {
   var $dialog = this.elems.dialog();
@@ -161,6 +170,8 @@ test('should call hide method', function () {
   ok($dialog.is(':hidden'), 'dialog is hidden');		
 });
 ```
+
+
 
 ```javascript
 test('should call destroy method', function () {
