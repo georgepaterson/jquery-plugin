@@ -131,7 +131,7 @@ The quint-fixture div contains the HTML we will be using in the tests.
 </div>
 ```
 
-The first test asserts whether or not the plugin is chainable, a fundamental feature of jQuery.
+The first test asserts whether or not the plugin is chainable, a feature of jQuery development.
 
 ```javascript
 test('is chainable', function() {
@@ -151,7 +151,9 @@ test('should return jquery collection', function () {
 });
 ```
 
+The following assertions test each of the public methods within the plugin.
 
+We test whether the show method is called, knowing that when the dshow method is called the dialog element should be visible we can test whether the dialog element is visible. 
 
 ```javascript
 test('should call show method', function () {
@@ -161,7 +163,7 @@ test('should call show method', function () {
 });
 ```
 
-
+We test whether the hide method is called, first we use the show method we know is working to make the dialog visible, then we call the hide method. Knowing that when the hide method is called the dialog element should not be visible we can test whether the dialog element is visible. 
 
 ```javascript
 test('should call hide method', function () {
@@ -171,7 +173,7 @@ test('should call hide method', function () {
 });
 ```
 
-
+We test whether the destroy method is called, knowing that when the destroy method is called all trace of the dialog on the element should be removed we can tests whether the dialog data on the element is undefined. 
 
 ```javascript
 test('should call destroy method', function () {
@@ -180,6 +182,8 @@ test('should call destroy method', function () {
   strictEqual(undefined, $dialog.data('dialog'), 'data on element destroyed');
 });
 ```
+
+Further information on unit testing with QUnit can be found at http://qunitjs.com/.
 
 ## Release History
 _(Nothing yet)_

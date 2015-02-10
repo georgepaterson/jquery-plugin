@@ -42,6 +42,7 @@
   });
   test('should call hide method', function () {
     var $dialog = this.elems.dialog();
+    ok($dialog.dialog('show'), 'show method called');
     ok($dialog.dialog('hide'), 'hide method called');
     ok($dialog.is(':hidden'), 'dialog is hidden');		
   });
