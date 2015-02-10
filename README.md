@@ -187,4 +187,5 @@ test('should call destroy method', function () {
 Further information on unit testing with QUnit can be found at http://qunitjs.com/.
 
 ## Release History
+
 _(Nothing yet)_
