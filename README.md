@@ -168,6 +168,7 @@ We test whether the hide method is called, first we use the show method we know 
 ```javascript
 test('should call hide method', function () {
   var $dialog = this.elems.dialog();
+	ok($dialog.dialog('show'), 'show method called');
   ok($dialog.dialog('hide'), 'hide method called');
   ok($dialog.is(':hidden'), 'dialog is hidden');		
 });
