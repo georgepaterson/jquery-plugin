@@ -87,7 +87,7 @@ $.fn.dialog.defaults = {
 
 ## Unit tests
 
-Unti tests for jQuery are created in QUnit, the full API reference can be found at http://api.qunitjs.com/ 
+Unit tests for jQuery are created in QUnit, the full API reference can be found at http://api.qunitjs.com/ the included handy little reference can be found below:
 
     Test methods:
       module(name, {[setup][ ,teardown]})
@@ -105,6 +105,8 @@ Unti tests for jQuery are created in QUnit, the full API reference can be found 
       notStrictEqual(actual, expected, [message])
       throws(block, [expected], [message])
 
+We define a simple dialog module for all the unit tests, further modules could be created if we need to target specific features of the code. Within the module we define a the beforeEach callback, before each test we set this.elems to the example id.   
+
 ```javascript
 module('dialog', {
   beforeEach: function() {
@@ -112,6 +114,7 @@ module('dialog', {
   }
 });
 ```
+The quint-fixture div contains the HTML we will be using in the tests.
 
 ```html
 <div id="qunit-fixture">
