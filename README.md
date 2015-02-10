@@ -165,7 +165,14 @@ test('should call show method', function () {
 
 We test whether the hide method is called, first we use the show method we know is working to make the dialog visible, then we call the hide method. Knowing that when the hide method is called the dialog element should not be visible we can test whether the dialog element is visible. 
 
-
+```javascript
+test('should call hide method', function () {
+	var $dialog = this.elems.dialog();
+	ok($dialog.dialog('show'), 'show method called');
+	ok($dialog.dialog('hide'), 'hide method called');
+	ok($dialog.is(':hidden'), 'dialog is hidden');		
+});
+```
 
 We test whether the destroy method is called, knowing that when the destroy method is called all trace of the dialog on the element should be removed we can tests whether the dialog data on the element is undefined. 
 
