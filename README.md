@@ -8,7 +8,19 @@ _Dialog plugin is only designed as a demonstration not for production._
 
 The plugin has been scaffolded using the [Yeoman jQuery generator][yeoman].
 
-There are three possible grunt tasks for this project accessible through the command line.
+### Requirements
+
+The plugin scaffold uses Grunt and Bower, Node is required for the build environment.
+
+With Node installed, on the command line, at the project root, run Node install to get the required Node modules for the Grunt tasks.
+
+	$ node install
+
+With Bower installed, on the command line, at the project root, run Bower install to get the jQuery and QUnit Bower components.
+
+	$ bower install
+
+With Grunt installed there are three possible grunt tasks for this project accessible through the command line.
 
 	$ grunt
 
@@ -105,7 +117,7 @@ Unit tests for the jQuery plugin are created in QUnit, the full API reference ca
       notStrictEqual(actual, expected, [message])
       throws(block, [expected], [message])
 
-We define a simple dialog module for all the unit tests, further modules could be created if we need to target specific features of the code. Within the module we define a the beforeEach callback, before each test we set this.elems to the example id.   
+We define a simple dialog module for all the unit tests, further modules could be created if we need to target specific features of the code. Within the module we define a beforeEach callback, before each test we set this.elems to the example id.   
 
 ```javascript
 module('dialog', {
