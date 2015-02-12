@@ -2,6 +2,8 @@
 
 Demonstration jQuery plugin showing how to structure a plugin with public functions for unit testing.
 
+The plugin is a simple dialog plugin that will hide/show predefined dialog HTML using CSS and JavaScript. The plugin may also be destroyed, removing all trace of the plugin from the DOM.
+
 _Dialog plugin is only designed as a demonstration not for production._
 
 ## Getting started
