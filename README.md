@@ -202,4 +202,4 @@ Further information on unit testing with QUnit can be found at http://qunitjs.co
 
 ## Release History
 
-_(Nothing yet)_
+v1.0.0 - Article release.
