@@ -145,7 +145,7 @@ The quint-fixture div contains the HTML we will be using in the tests.
 </div>
 ```
 
-The first test asserts whether or not the plugin is chainable, a feature of jQuery development.
+The first test asserts whether or not the plugin is chainable.
 
 ```javascript
 test('is chainable', function() {
