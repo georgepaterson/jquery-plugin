@@ -16,7 +16,7 @@ The plugin scaffold uses Grunt and Bower, Node is required for the build environ
 
 With Node installed, on the command line, at the project root, run Node install to get the required Node modules for the Grunt tasks.
 
-	$ node install
+	$ npm install
 
 With Bower installed, on the command line, at the project root, run Bower install to get the jQuery and QUnit Bower components.
 
